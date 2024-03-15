@@ -1,0 +1,59 @@
+<body>
+    
+    <div >
+        <form [formGroup]="registerCustomer" class="w-50 ms-5 mt-5" [formGroup]="registerCustomer" >
+          
+            <div *ngIf="step ==1">
+                <h3>Customer Details</h3>
+                        <input type="number" formControlName="id" placeholder="Enter Customer Id "><p></p>
+                        <input type="text" formControlName="customerName" placeholder="Enter Customer Name"><p></p>
+                        <input type="text" formControlName="address" placeholder="Enter Your address "><p></p>
+                        <input type="email" formControlName="email" placeholder="Enter Your Email"><p></p>
+
+                    
+                            <input type="number" formControlName="mobileNo" placeholder="Enter Mobile No"><p></p>
+                        
+                            <label>Select Gender : </label>
+                            <input type="radio" formControlName="gender" name="gender" value="male"> Male &nbsp;&nbsp;
+                            <input type="radio" formControlName="gender" name="gender" value="female"> Female &nbsp;&nbsp;
+                            <input type="radio" formControlName="gender" name="gender" value="other"> Other &nbsp;&nbsp; <br><br>
+                            <input type="text" formControlName="userName" placeholder="Enter Username "><p></p>
+                
+                        <input type="password" formControlName="password" placeholder="Enter Password"><p></p>
+                </div>
+
+
+                 <div *ngIf="step == 2" formGroupName="bank">
+
+                        <h3>Bank Details</h3><br><br>
+                        <input type="number" formControlName="accountNo" placeholder="Enter Account number"><p></p>
+                        <input type="text" formControlName="bankName" placeholder="Enter Bank Name"><p></p>
+                        <input type="text" class="uppercase" formControlName="bankIFSC" placeholder="Enter IFSC Code"><p></p>
+                        <input type="text" formControlName="branchAddress" placeholder="Enter Address ">
+                </div> <br>
+
+                <div *ngIf="step == 3" formGroupName="document">
+                    <h3>Upload Documents </h3> <br><br>
+
+                    <input type="number" formControlName="documentId" placeholder="Enter Document Id"><p></p>
+                    <label >Upload Customer Photo :  </label> &nbsp;&nbsp;
+                    <img [src]="ph" height="50" width="50">
+                    <input type="file" formControlName="customerPhoto"  (change)="onSelectPhoto($event)"><p></p>
+                    <label >Upload adhar Card :  </label> &nbsp;&nbsp;  <img [src]="ad" height="50" width="50">
+                    <input type="file" formControlName="adharCard" (change)="onSelectAdharCard($event)"><p></p>
+                    <label >Upload Pan Card :  </label> &nbsp;&nbsp; <img [src]="pn" height="50" width="50">
+                    <input type="file" formControlName="panCard" (change)="onSelectPanCard($event)"><p></p>
+                    <label >Upload Bank Passbook :  </label> &nbsp;&nbsp;  <img [src]="bn" height="50" width="50">
+                    <input type="file" formControlName="bankPassbook" (change)="onSelectBankPassbook($event)"><p></p>
+                    <label >Upload Income certificate  :  </label> &nbsp;&nbsp;  <img [src]="in" height="50" width="50">
+                    <input type="file" formControlName="incomeCertificate" (change)="onSelectIncomeCertificate($event)">
+                    
+
+                </div> <br>
+                <button type="submit" class="btn btn-primary" *ngIf="step != 1" (click)="onPrevious()">Previous</button> &nbsp;&nbsp;&nbsp;
+                <button type="submit" class="btn btn-primary" *ngIf="step != 3" (click)="onNext()" >Next</button> &nbsp;&nbsp;&nbsp;
+                <button type="submit" class="btn btn-success " *ngIf="step == 3 "(click)="onsubmit()"> Confirm & Submit</button>
+
+        </form>
+    </div>
+</body>

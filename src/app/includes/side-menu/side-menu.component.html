@@ -1,0 +1,9 @@
+
+<div class="bg-dark w-100 custom">
+
+    <div *ngFor="let bt of userChoice[0][type]">
+        <button class="w-100 btn btn-warning" (click)="navigateTo(bt.link)">{{bt.label}}</button>
+    </div>
+
+
+</div>

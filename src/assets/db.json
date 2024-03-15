@@ -1,0 +1,44 @@
+{
+  "enquiry": [
+    {
+      "id": 1,
+      "enquiryName": "Anmol Sanap",
+      "email": "anmolsan1996@gmail.com",
+      "panCard": "gyrps9784l",
+      "mobileNo": 7559333093,
+      "address": "Parbhani",
+      "gender": "Male"
+    }
+  ],
+  "re": [
+    {
+      "id": "eed8",
+      "customerId": "",
+      "customerName": "Anmol Sanap",
+      "address": "Parbhani",
+      "mobileNo": 7559333093,
+      "email": "anmolsan1996@gmail.com",
+      "userName": "anmol",
+      "password": "anmol@123",
+      "gender": "male",
+      "bank": {
+        "bankName": "State Bank of India",
+        "bankIFSC": "sbin0004706",
+        "branchAddress": "Gangakhed",
+        "accountNo": 62299130027,
+        "document": {
+          "documentId": null,
+          "adharCard": null,
+          "panCard": null,
+          "bankPassbook": null,
+          "incomeCertificate": null,
+          "customerPhoto": null
+        }
+      }
+    }
+  ],
+  "oe": [],
+  "admin": [],
+  "accountHead": [],
+  "creditManager": []
+}

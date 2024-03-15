@@ -1,0 +1,46 @@
+
+
+<body>
+    
+   <div class="d-flex justify-content-center ms-auto col col-6 mt-3">
+  
+    <form [formGroup]="enquiryForm" (ngSubmit)="onSubmitEnquiry()">
+        <h3><u>Enquiry Form</u></h3><br>
+        <div class="col col-8">
+            <label><b>Enquiry Id</b> </label> 
+            <input type="number" formControlName="id" placeholder="Enter Your Id "> <p></p>
+    
+            <label><b>Your Name</b> </label> 
+            <input type="text" formControlName="enquiryName" placeholder="Enter Your Name "> <p></p>
+    
+            <label><b> Address</b></label>
+            <input type="text" formControlName="address" placeholder="Enter Address"><p></p>
+    
+            <label><b>Pan No </b></label>
+            <input type="text" class="uppercase" formControlName="panCard" placeholder="Enter Pan Card No"><p></p>
+
+       
+        
+            <label><b>Mobile No </b></label>
+            <input type="number" formControlName="mobileNo" placeholder="Enter Mobile No"><p></p>
+
+            <label><b>Email </b></label>
+            <input type="email" formControlName="email" placeholder="Enter Email"><p></p>
+
+        
+             
+            <label><b>Gender :</b></label> 
+            <select style="font-size: 20px;" name="gender" formControlName="gender" required="required" default="Male">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+            </select>  <br>
+         
+             
+        </div><br>
+
+        <button type="submit" class="btn btn-dark w-50">Submit</button><br><br>
+        <button type="submit" class="btn btn-primary" (click)="onApproval()">Process for Loan</button>
+    </form>
+   </div>
+</body>
