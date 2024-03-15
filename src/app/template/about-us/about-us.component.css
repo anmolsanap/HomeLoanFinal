@@ -1,0 +1,119 @@
+footer {
+    background-color: #495ce9;
+    color: #fff;
+    padding: 20px 0;
+    border-top: 2px solid #fff;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.footer-nav ul li:last-child {
+    margin-right: 0;
+}
+
+.footer-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.copy {
+    text-align: center;
+}
+
+
+
+/* Style for Why Choose Us section */
+.why-choose-us {
+    background-color: #e0e2f3;
+    padding: 50px 20px;
+    text-align: left; /* Align text to the left */
+}
+
+.why-choose-us h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.why-choose-us h4 {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+    font-family: Lato,sans-serif;
+}
+
+.why-choose-us ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.why-choose-us .highlight {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Vertical alignment for highlighted items */
+.why-choose-us .highlight {
+    display: block;
+}
+
+/* Hover effect for highlighted items */
+.why-choose-us .highlight:hover {
+    background-color: #0056b3;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.logo-box{
+    display: flex;
+    justify-content: space-around;
+    
+}.box-1 img{
+   
+    border-radius:140px;
+    height: 140px;
+    /* box-shadow: 6px 6px 12px rgba(0,0,0,0.2),4px 6px 20px 0 rgba(0,0,0,0.19); */
+    box-shadow: 6px 6px 12px lightblue,4px 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.logo-box pre{
+    font-family: Lato,sans-serif;
+    font-size: 20px;
+    color: #424242;
+    
+}.list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    justify-content: center;
+}
+.l-1{
+    box-shadow: 6px 6px 12px rgba(0,0,0,0.2),4px 6px 20px 0 rgba(0,0,0,0.19);
+    justify-content: space-around;
+   margin: 2%;
+}

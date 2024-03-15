@@ -1,0 +1,63 @@
+
+<div style="background-image: url('/assets/images/sl_121021_47240_04.jpg'); background-repeat: no-repeat; background-size: cover; height: 100vh;">
+    <div class="container col col-10">
+        <div class=""style="margin-left: 800px; padding-top: 10px;">
+            <div class="form-container">
+                <h2>Customer Details</h2>
+        <form [formGroup]="registerCustomer" class="w-50 ms-5 mt-5" [formGroup]="registerCustomer" style="height: 400px;">
+          
+            <div *ngIf="step ==1" >
+                <!-- <h3>Customer Details</h3> -->
+                        <input type="number" formControlName="id" class="form-control" placeholder="Enter Customer Id "><p></p>
+                        <input type="text" formControlName="customerName" class="form-control" placeholder="Enter Customer Name"><p></p>
+                        <input type="text" formControlName="address" class="form-control" placeholder="Enter Your address "><p></p>
+                        <input type="email" formControlName="email" class="form-control" placeholder="Enter Your Email"><p></p>
+
+                    
+                            <input type="number" formControlName="mobileNo" class="form-control" placeholder="Enter Mobile No"><p></p>
+                        
+                            <label>Select Gender : </label>
+                            <input type="radio" formControlName="gender"  name="gender" value="male"> Male &nbsp;&nbsp;
+                            <input type="radio" formControlName="gender" name="gender" value="female"> Female &nbsp;&nbsp;
+                            <input type="radio" formControlName="gender"  name="gender" value="other"> Other &nbsp;&nbsp; 
+                            <input type="text" formControlName="userName" class="form-control" placeholder="Enter Username"><p></p>
+                
+                           <input type="password" formControlName="password" class="form-control" placeholder="Enter Password"><p></p>
+                </div>
+
+
+                 <div *ngIf="step == 2" formGroupName="bank">
+
+                        <h3>Bank Details</h3><br><br>
+                        <input type="number" formControlName="accountNo" class="form-control" placeholder="Enter Account number"><p></p>
+                        <input type="text" formControlName="bankName"  class="form-control"placeholder="Enter Bank Name"><p></p>
+                        <input type="text" class="uppercase" formControlName="bankIFSC" class="form-control" placeholder="Enter IFSC Code"><p></p>
+                        <input type="text" formControlName="branchAddress" class="form-control" placeholder="Enter Address ">
+                </div> <br>
+
+                <div *ngIf="step == 3" formGroupName="document">
+                    <h3>Upload Documents </h3> <br><br>
+
+                    <input type="number" formControlName="documentId" class="form-control" placeholder="Enter Document Id"><p></p>
+                    <label >Upload Customer Photo :  </label> &nbsp;&nbsp;
+                    <img [src]="url" height="50" width="50">
+                    <input type="file" formControlName="customerPhoto"  (change)="onSelectFile($event)"><p></p>
+                    <label >Upload adhar Card :  </label> &nbsp;&nbsp;  <img [src]="url" height="50" width="50">
+                    <input type="file" formControlName="adharCard" (change)="onSelectFile($event)"><p></p>
+                    <label >Upload Pan Card :  </label> &nbsp;&nbsp; <img [src]="url" height="50" width="50">
+                    <input type="file" formControlName="panCard" (change)="onSelectFile($event)"><p></p>
+                    <label >Upload Bank Passbook :  </label> &nbsp;&nbsp;  <img [src]="url" height="50" width="50">
+                    <input type="file" formControlName="bankPassbook" (change)="onSelectFile($event)"><p></p>
+                    <label >Upload Income certificate  :  </label> &nbsp;&nbsp;  <img [src]="url" height="50" width="50">
+                    <input type="file" formControlName="incomeCertificate" (change)="onSelectFile($event)">
+                    
+
+                </div> <br>
+                <button type="submit" class="btn btn-primary" *ngIf="step != 1" (click)="onPrevious()">Previous</button> &nbsp;&nbsp;&nbsp;
+                <button type="submit" class="btn btn-primary" *ngIf="step != 3" (click)="onNext()" >Next</button> &nbsp;&nbsp;&nbsp;
+                <button type="submit" class="btn btn-success " *ngIf="step == 3 "(click)="onsubmit()"> Confirm & Submit</button>
+
+        </form>
+    </div>
+</div>
+

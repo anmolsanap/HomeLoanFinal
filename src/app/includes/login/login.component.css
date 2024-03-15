@@ -1,0 +1,78 @@
+
+
+.form-container {
+    background-color: #34495e; /* Dark blue background */
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"%3E%3Cg fill="%23ffffff" fill-opacity="0.04"%3E%3Cpath fill-rule="evenodd" d="M64 8c0 4-4 8-8 8s-8-4-8-8 4-8 8-8 8 4 8 8zM32 0c4 0 8 4 8 8s-4 8-8 8-8-4-8-8 4-8 8-8zM0 0c0 4-4 8-8 8s-8-4-8-8 4-8 8-8 8 4 8 8zM64 40c0 4-4 8-8 8s-8-4-8-8 4-8 8-8 8 4 8 8zM32 32c4 0 8 4 8 8s-4 8-8 8-8-4-8-8 4-8 8-8zM0 32c0 4-4 8-8 8s-8-4-8-8 4-8 8-8 8 4 8 8zM64 64c0 4-4 8-8 8s-8-4-8-8 4-8 8-8 8 4 8 8zM32 64c4 0 8 4 8 8s-4 8-8 8-8-4-8-8 4-8 8-8zM0 64c0 4-4 8-8 8s-8-4-8-8 4-8 8-8 8 4 8 8z" clip-rule="evenodd"%3E%3C/path%3E%3C/g%3E%3C/svg%3E'); /* Subtle pattern background */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+   
+   
+}
+
+.form-container h2 {
+    text-align: center;
+    color: #ffffff;
+}
+
+.form-group {
+  
+margin-bottom: 50px;
+ 
+}
+
+.form-control {
+    border-radius: 20px;
+    padding: 20px;
+    font-size: 16px;
+    background-color: #2c3e50; /* Dark blue input background */
+    color: #ffffff; /* White text color */
+    border: 1px solid #566573; /* Gray border */
+    
+}   
+
+.form-control::placeholder {
+    color: #95a5a6; /* Lighter gray placeholder text */
+
+    
+}
+
+.btn-submit {
+    background-color: #051f3d; /* Navy blue button */
+    color: #ffffff; /* White text color */
+   
+}
+
+.btn-submit:hover {
+    background-color: #e8eef4; /* Darker blue on hover */
+}
+
+/* Additional Design Modifications */
+.form-group label {
+    font-weight: bold;
+    color: #ffffff; /* White label color */
+}
+
+.btn-submit {
+    text-transform: uppercase;
+}
+
+
+.btn-submit:focus {
+    outline: none;
+}
+
+.btn-submit:disabled {
+    opacity: 0.5; /* Reduced opacity for disabled button */
+    cursor: not-allowed;
+}
+.nqfprm{
+    margin-left: -900px;
+}
+form
+
+{
+    margin-top: 35px;
+}
+ 
+
