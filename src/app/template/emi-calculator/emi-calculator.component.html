@@ -1,36 +1,42 @@
-  <!-- <div style="background-image: url('/assets/images/sl_121021_47240_04.jpg'); background-repeat: no-repeat; background-size: cover; height: 100vh;"></div>
-      
-      <div class="container col col-9">
-        <div class="" style="margin-left: 800px; padding-top: 120px;">
-            <div class="form-container">
-                <h2>EMI Calculator</h2>
-             
-                <div>
-                  <label for="loanAmount">Loan Amount (INR):</label> 
-                 <input type="number" id="loanAmount"  class="form-control" [(ngModel)]="loanAmount"  placeholder="loanAmount" />
-               </div>
-             
-               <div>
-                 <label for="loanTerm">Loan Term (in months): </label>
-                 <input type="number" id="loanTerm" class="form-control" [(ngModel)]="loanTerm"  placeholder="Loan Term (in months):"/>
-               </div>
-             
-               <div>
-                 <label for="interestrate">Interest Rate (annual): </label>
-                 <input type="text" id="interestrate"  class="form-control" [(ngModel)]="interestRate" />
-               </div>
-                    <br>
-               <button (click)="calculateEMI()">Calculate EMI</button>
- 
-               <div *ngIf="emi !== undefined">
-                 <h3>Monthly EMI: {{ emi | currency:'INR':'symbol':'1.2-2' }}</h3>
-                 
-               </div>
-               
-               
-               
-            </div>
-        </div>
-    </div>
-      </div>  -->
 
+      <div class="emi">
+        <div class="container">
+                <h3 class="mb-4">EMI Calculator</h3>    
+            <div id="left" style="width: 30%; float: left;">
+                  <form (ngSubmit)="calculateEMI()" #emiForm="ngForm">
+                    <div class="mb-3">
+                      <label for="loanAmount" class="form-label">Loan Amount (₹):</label>
+                      <input type="number" class="form-control " id="loanAmount" name="loanAmount" [(ngModel)]="loanAmount" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="interestRate" class="form-label">Interest Rate (%):</label>
+                      <input type="number" class="form-control " id="interestRate" name="interestRate" [(ngModel)]="interestRate" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="loanTenure" class="form-label">Loan Tenure (Months):</label>
+                      <input type="number" class="form-control" id="loanTenure" name="loanTenure" [(ngModel)]="loanTenure" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary me-1">Calculate EMI</button>
+                    <button type="reset" class="btn btn-primary" (click)="onReset()">Reset</button>
+                  </form>
+                  </div>
+                  <div id="right" style="width: 60%; float: right;">
+                    
+                        <h3>Your EMI</h3>
+                        <!--<div *ngIf="emiAmount">-->
+                          <br>
+                          <p>EMI -   {{ emiAmount | currency:'INR':'symbol':'1.2-2' }}</p>
+                          <p>Total Interest -   {{ totalInterest | currency:'INR':'symbol':'1.2-2' }}</p>
+                          <p>Total Payout -    {{ totalPayableAmount | currency:'INR':'symbol':'1.2-2' }}</p>
+                        
+                </div>
+            </div>
+        
+            <br>
+            </div>  
+          
+        
+        
+            
+            
+            

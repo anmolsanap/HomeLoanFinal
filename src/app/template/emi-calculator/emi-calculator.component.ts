@@ -15,26 +15,6 @@ interface EmiDetails {
 })
 export class EmiCalculatorComponent  {
 
-
-  // calculatorForm: FormGroup;
-  // constructor(private fb: FormBuilder) { }
-
-  // loanAmount: number;
-  // loanTerm: number;
-  // interestRate: number = 7.5;
-  // emi: number | undefined;
-
-
-  // calculateEMI() {
-  //   const principal = this.loanAmount || 0;
-  //   const monthlyInterestRate = (this.interestRate || 0) / 1200;
-  //   const numberOfPayments = this.loanTerm || 0;
-
-  //   this.emi =
-  //     (principal * monthlyInterestRate) /
-  //     (1 - Math.pow(1 + monthlyInterestRate, -numberOfPayments));
-  // }
-
   itemPerPage =10;
   currentPage=1;
   loanAmount: number;
@@ -86,17 +66,4 @@ export class EmiCalculatorComponent  {
   {
     window.location.reload();
   }
-changePage(page:number)
-{
-  this.currentPage=page;
-}
-
-get paginatedData()
-{
-  const start=(this.currentPage-1)*(this.itemPerPage)
-  const end=start+this.itemPerPage
-  return this.emiDetails.slice(start,end)
-  
-}
-
 }

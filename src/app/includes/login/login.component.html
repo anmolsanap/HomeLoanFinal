@@ -1,4 +1,4 @@
-<div style="background-image: url('/assets/images/sl_121021_47240_04.jpg'); background-repeat: no-repeat; background-size: cover; height: 100vh;">
+<!-- <div style="background-image: url('/assets/images/sl_121021_47240_04.jpg'); background-repeat: no-repeat; background-size: cover; height: 100vh;">
     <div class="container col col-9">
         <div class="" style="margin-left: 800px; padding-top: 200px;">
             <div class=" form-container">
@@ -19,5 +19,21 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
+<div class="log">
+        
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    
+      <div class="smallbox">
+        <h3> Welocme To <br>Finance</h3>
+          <br>
+            <input class="form-control"formControlName="userName" placeholder="Enter User Name"> <br>
+            <input class="form-control" formControlName="password" placeholder="Enter User Password"><br>
+            <button class="btn btn-secondary" type="submit">SignIn&nbsp;<i class="fa fa-sign-in"></i></button>&nbsp;&nbsp;&nbsp;
+        </div>
+
+    </form>
+
+   
+    </div>

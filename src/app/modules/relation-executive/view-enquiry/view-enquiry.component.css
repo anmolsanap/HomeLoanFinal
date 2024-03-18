@@ -1,34 +1,24 @@
-/* .color{
-    color: #e64d00;
-}
-th{
-    text-align: center;
-} */
 
-/* body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa; 
-    margin: 0;
-    padding: 0;
-} */
 body {
-    margin: 0;
-    padding: 0;
-    background-image: url('/assets/images/viewback.jpeg'); 
+   
+    background-image: url('/assets/images/605746.jpg'); 
     /* Replace 'your-background-image.jpg' with your actual image file */
     background-size: cover;
-    background-position: center;
+    height: 90vh;
+    /* background-position: center; */
 }
-.container {
+ .container {
     max-width: 960px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #fff; /* White background */
+    /* background-color: #fff; White background */
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
-    background-color: rgba(255, 255, 255, 0.8); /* White background with some opacity */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    /* Shadow effect  */
+    background-color: rgba(255, 255, 255, 0.8);
+     /* White background with some opacity  */
    
-}
+} 
 
 h3 {
     text-align: center;

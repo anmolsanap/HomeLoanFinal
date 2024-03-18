@@ -1,8 +1,8 @@
 
-
-.form-container {
-    background-color: #34495e; /* Dark blue background */
-    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"%3E%3Cg fill="%23ffffff" fill-opacity="0.04"%3E%3Cpath fill-rule="evenodd" d="M64 8c0 4-4 8-8 8s-8-4-8-8 4-8 8-8 8 4 8 8zM32 0c4 0 8 4 8 8s-4 8-8 8-8-4-8-8 4-8 8-8zM0 0c0 4-4 8-8 8s-8-4-8-8 4-8 8-8 8 4 8 8zM64 40c0 4-4 8-8 8s-8-4-8-8 4-8 8-8 8 4 8 8zM32 32c4 0 8 4 8 8s-4 8-8 8-8-4-8-8 4-8 8-8zM0 32c0 4-4 8-8 8s-8-4-8-8 4-8 8-8 8 4 8 8zM64 64c0 4-4 8-8 8s-8-4-8-8 4-8 8-8 8 4 8 8zM32 64c4 0 8 4 8 8s-4 8-8 8-8-4-8-8 4-8 8-8zM0 64c0 4-4 8-8 8s-8-4-8-8 4-8 8-8 8 4 8 8z" clip-rule="evenodd"%3E%3C/path%3E%3C/g%3E%3C/svg%3E'); /* Subtle pattern background */
+/* .form-container {
+    background-color: #34495e; 
+  
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"%3E%3Cg fill="%23ffffff" fill-opacity="0.04"%3E%3Cpath fill-rule="evenodd" d="M64 8c0 4-4 8-8 8s-8-4-8-8 4-8 8-8 8 4 8 8zM32 0c4 0 8 4 8 8s-4 8-8 8-8-4-8-8 4-8 8-8zM0 0c0 4-4 8-8 8s-8-4-8-8 4-8 8-8 8 4 8 8zM64 40c0 4-4 8-8 8s-8-4-8-8 4-8 8-8 8 4 8 8zM32 32c4 0 8 4 8 8s-4 8-8 8-8-4-8-8 4-8 8-8zM0 32c0 4-4 8-8 8s-8-4-8-8 4-8 8-8 8 4 8 8zM64 64c0 4-4 8-8 8s-8-4-8-8 4-8 8-8 8 4 8 8zM32 64c4 0 8 4 8 8s-4 8-8 8-8-4-8-8 4-8 8-8zM0 64c0 4-4 8-8 8s-8-4-8-8 4-8 8-8 8 4 8 8z" clip-rule="evenodd"%3E%3C/path%3E%3C/g%3E%3C/svg%3E'); 
     padding: 25px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
@@ -25,32 +25,32 @@ margin-bottom: 50px;
     border-radius: 20px;
     padding: 20px;
     font-size: 16px;
-    background-color: #2c3e50; /* Dark blue input background */
-    color: #ffffff; /* White text color */
-    border: 1px solid #566573; /* Gray border */
+    background-color: #2c3e50;
+    
+    color: #ffffff; 
+    border: 1px solid #566573;
     
 }   
 
 .form-control::placeholder {
-    color: #95a5a6; /* Lighter gray placeholder text */
-
+    color: #95a5a6; 
     
 }
 
 .btn-submit {
-    background-color: #051f3d; /* Navy blue button */
-    color: #ffffff; /* White text color */
+    background-color: #051f3d; 
+    color: #ffffff; 
    
 }
 
 .btn-submit:hover {
-    background-color: #e8eef4; /* Darker blue on hover */
+    background-color: #e8eef4; 
 }
 
-/* Additional Design Modifications */
+
 .form-group label {
     font-weight: bold;
-    color: #ffffff; /* White label color */
+    color: #ffffff; 
 }
 
 .btn-submit {
@@ -63,7 +63,7 @@ margin-bottom: 50px;
 }
 
 .btn-submit:disabled {
-    opacity: 0.5; /* Reduced opacity for disabled button */
+    opacity: 0.5; 
     cursor: not-allowed;
 }
 .nqfprm{
@@ -75,4 +75,41 @@ form
     margin-top: 35px;
 }
  
+ */
 
+
+ .log{
+    background-image: url("/../assets/images/login.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+  width: 100%;
+  background-position: center center;
+  padding: 70px;
+}
+.btn{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.form-control{  
+    border-style: groove;
+  display: flex;
+  background:white;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: large;
+  font-weight: bold;
+}
+form{
+    padding: 60px;
+    display: flex;
+    margin-left:800px;
+   
+}
+h2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;   
+}
+.smallbox{
+    height:350px;
+    width:700px;
+    padding :40px;
+    background:url('/assets/images/gray.jpeg');
+}

@@ -11,46 +11,96 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit{
 
-    constructor(private formBuilder : FormBuilder, private router : Router){}
+  //   constructor(private formBuilder : FormBuilder, private router : Router){}
 
-      loginForm :  FormGroup;
+  //     loginForm :  FormGroup;
 
-  ngOnInit(): void {
-      this.loginForm = this.formBuilder.group(
-        {
-          userName : ['',[Validators.required]],
-          password : ['',[Validators.required]]
-        }
-      )
-  }
-  onLogin(){
-      let un = this.loginForm.controls['userName'].value;
-      let ps = this.loginForm.controls['password'].value;
+  // ngOnInit(): void {
+  //     this.loginForm = this.formBuilder.group(
+  //       {
+  //         userName : ['',[Validators.required]],
+  //         password : ['',[Validators.required]]
+  //       }
+  //     )
+  // }
+  // onLogin(){
+  //     let un = this.loginForm.controls['userName'].value;
+  //     let ps = this.loginForm.controls['password'].value;
 
-      if(un=== 'admin' && ps === 'admin@123'){
-        alert('Admin logged in')
-        sessionStorage.setItem("userType", "admin");
-          this.router.navigateByUrl('user-dashboard/admin');
+  //     if(un=== 'admin' && ps === 'admin@123'){
+  //       alert('Admin logged in')
+  //       sessionStorage.setItem("userType", "admin");
+  //         this.router.navigateByUrl('user-dashboard/admin');
+  //     }
+  //     else if(un === 're' && ps === 're@123'){
+  //       alert("RE Logged in")
+  //       sessionStorage.setItem("userType", "relation_executive");
+  //       this.router.navigateByUrl('user-dashboard/relation_executive')
+  //         }
+  //         else if(un === 'oe' && ps === 'oe@123'){
+  //           alert("RE Logged in")
+  //           sessionStorage.setItem("userType", "relation_executive");
+  //           this.router.navigateByUrl('user-dashboard/relation_executive')
+  //       }
+  //       else if(un === 'ah' && ps === 'ah@123'){
+  //         alert("RE Logged in")
+  //         sessionStorage.setItem("userType", "relation_executive");
+  //         this.router.navigateByUrl('user-dashboard/relation_executive')
+  //     }
+  //     else if(un === 'cm' && ps === 'cm@123'){
+  //       alert("RE Logged in")
+  //       sessionStorage.setItem("userType", "relation_executive");
+  //       this.router.navigateByUrl('user-dashboard/relation_executive')
+  //   }
+  // }
+
+  constructor(private fb:FormBuilder ,private router:Router){}
+  //loginform:FormGroup;
+  loginForm :  FormGroup;
+  ngOnInit(): void 
+  {
+    this.loginForm=this.fb.group(
+      {
+        userName:['',[Validators.required]],
+        password:['',[Validators.required]]
       }
-      else if(un === 're' && ps === 're@123'){
-        alert("RE Logged in")
-        sessionStorage.setItem("userType", "relation_executive");
-        this.router.navigateByUrl('user-dashboard/relation_executive')
+    )
+  }
+  
+
+  onSubmit()
+  {
+    let un = this.loginForm.controls['userName'].value;
+        let ps = this.loginForm.controls['password'].value;
+  
+        if(un=== 'admin' && ps === 'admin@123'){
+          alert('Admin logged in')
+          sessionStorage.setItem("userType", "admin");
+            this.router.navigateByUrl('user-dashboard/admin');
+        }
+        else if(un === 're' && ps === 're@123'){
+          alert("RE Logged in")
+          sessionStorage.setItem("userType", "relation_executive");
+          this.router.navigateByUrl('user-dashboard/relation_executive')
+            }
+            else if(un === 'oe' && ps === 'oe@123'){
+              alert("RE Logged in")
+              sessionStorage.setItem("userType", "relation_executive");
+              this.router.navigateByUrl('user-dashboard/relation_executive')
           }
-          else if(un === 'oe' && ps === 'oe@123'){
+          else if(un === 'ah' && ps === 'ah@123'){
             alert("RE Logged in")
             sessionStorage.setItem("userType", "relation_executive");
             this.router.navigateByUrl('user-dashboard/relation_executive')
         }
-        else if(un === 'ah' && ps === 'ah@123'){
+        else if(un === 'cm' && ps === 'cm@123'){
           alert("RE Logged in")
           sessionStorage.setItem("userType", "relation_executive");
           this.router.navigateByUrl('user-dashboard/relation_executive')
-      }
-      else if(un === 'cm' && ps === 'cm@123'){
-        alert("RE Logged in")
-        sessionStorage.setItem("userType", "relation_executive");
-        this.router.navigateByUrl('user-dashboard/relation_executive')
+        }
+    else
+    {
+      alert('Enter valid authentication details...!')
     }
   }
 }
