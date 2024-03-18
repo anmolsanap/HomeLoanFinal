@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { EnquiryService } from '../../../services/enquiry.service';
 import { Router } from '@angular/router';
 import { UserEnquiry } from '../../../model/user-enquiry';
+import { Observable } from 'rxjs';
 
 
 @Component({
@@ -14,34 +15,24 @@ export class ViewEnquiryComponent implements OnInit{
     constructor(private enquiryService : EnquiryService, private router : Router){}
 
     enquiryList : UserEnquiry[];
-    cibilScore : number;
+    
 
   ngOnInit(): void {
    
-      this.enquiryService.getAllEnquiry().subscribe((enquiries : UserEnquiry[])=>
+      this.enquiryService.getAllEnquiry(Observable).subscribe((enquiries : any)=>
       {
         this.enquiryList=enquiries;
       });
   }
 
-  checkCibilScore(enquiryId : number){
-   alert("ckeck cibil score executed : ")
-    var newData = [];
-
-    var size = size || 700;
-    var baseSize = 640;
-
-    while( baseSize < size ) {
-        baseSize++;
-        newData.push( {
-            "mk" : Math.floor( Math.random()*900 ) + 100 //3 digit
-        } );
-    }  
+ 
+checkCibilScore(userenquiry:UserEnquiry){
+  this.enquiryService.updateCibilScore(userenquiry).subscribe();
     
-   this.cibilScore =Math.floor( Math.random()*900 ) + 100
-    return this.cibilScore ;
+      alert("cibil score fetch succesfully");
 
-
-  }
+      window.location.reload();
+    
+}
 
 }

@@ -15,17 +15,21 @@ export class EnquiryComponent implements OnInit{
 
   ngOnInit(): void {
      this.enquiryForm = this.formBuilder.group({
-      id : [],
       enquiryName :[],
       email : [],
       panCard :[],
       mobileNo :[],
       address :[],
       gender : [],
+  cibil:this.formBuilder.group({
+    cibilId:[]
+  })
       
      }) 
   }
   onSubmitEnquiry(){
+   
+    
       this.enquiryService.saveEnquiry(this.enquiryForm.value).subscribe();
 
       alert("You have registered successfully")

@@ -12,11 +12,13 @@ export class EnquiryService {
   constructor(private http : HttpClient) { }
 
   saveEnquiry(enquiry : UserEnquiry){
-      return this.http.post("http://localhost:3000/enquiry/", enquiry);
+      return this.http.post("http://laptop-enldsp8a:9000/saveenquiry", enquiry);
   }
 
-  getAllEnquiry(){
-    return this.http.get("http://localhost:3000/enquiry/");
+  getAllEnquiry(Observer){
+    return this.http.get("http://laptop-enldsp8a:9000/getuserenquiry");
   }
- 
+  updateCibilScore(cibil:UserEnquiry) {
+    return this.http.put("http://laptop-enldsp8a:9000/updateCibil/" +cibil.userEnquiryId,cibil);
+  }
 }

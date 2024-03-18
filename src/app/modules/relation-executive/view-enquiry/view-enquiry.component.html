@@ -1,9 +1,11 @@
-<br><br><br>
 
-<body>
-    <h3 class="text-center color"><b>Customer Details</b></h3><br>
-    <table class="table table-hover bg-light">
-        <thead>
+    <!-- <h3 class="text-center color"><b>Enquiry Details</b></h3><br>
+    <table class="table table-hover bg-light"> -->
+       <body>
+        <div class="container">
+        <h3>Enquiry Details</h3>
+        <table>
+        <thead >
             <tr>
                 <th>Customer Id</th>
                 <th>Customer Name</th>
@@ -14,11 +16,12 @@
                 <th>Gender</th>
                 <th>Action</th>
                 <th>Cibil Score</th>
+                <th>Cibil Status</th>
             </tr>
         </thead>
         <tbody class="text-center">
             <tr *ngFor="let enquiry of enquiryList">
-                <td>{{enquiry.id}}</td>
+                <td>{{enquiry.userEnquiryId}}</td>
                 <td>{{enquiry.enquiryName}}</td>
                 <td>{{enquiry.address}}</td>
                 <td>{{enquiry.email}}</td>
@@ -26,10 +29,23 @@
                 <td>{{enquiry.mobileNo}}</td>
                 <td>{{enquiry.gender}}</td>
                 <td>
-                        <button type="submit" class="btn btn-dark" (click)="checkCibilScore(enquiry.id)">Check Cibil Score </button>
-                </td>
-                <td>{{cibilScore}}</td>
-            </tr>
+                    <button type="submit" class="btn btn-danger" (click)="checkCibilScore(enquiry)"
+                    [disabled]="enquiry.cibil.cibilScore"
+                    >Check Cibil Score</button>
+            </td>
+               
+                    <ng-container *ngIf="enquiry.cibil">
+                    <td>{{enquiry.cibil.cibilScore}}</td>
+                    <td>{{enquiry.cibil.cibilStatus}}</td>
+                  </ng-container>
+                  <ng-container *ngIf="!enquiry.cibil">
+                    <td colspan="2">Cibil data not available</td>
+                  </ng-container>
+                </tr>
+        
         </tbody>
     </table>
+</div>
 </body>
+
+

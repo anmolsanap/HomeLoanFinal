@@ -1,6 +1,6 @@
-<div style="background-image: url('/assets/images/sl_121021_47240_04.jpg'); background-repeat: no-repeat; background-size: cover; height: 100vh;">
+<div style="background-image: url('/assets/images/sl_121021_47240_04.jpg'); background-repeat: no-repeat; background-size: cover; height: 110vh;">
     <div class="container col col-10">
-        <div class=""style="margin-left: 800px; padding-top: 30px">
+        <div class=""style="margin-left: 800px; padding-top: 40px">
             <div class="form-container">
                 <h2>Enquiry Form</h2>
                 <form [formGroup]="enquiryForm" (ngSubmit)="onSubmitEnquiry()">
@@ -24,15 +24,15 @@
                         <input type="email" id="email" class="form-control" formControlName="email" placeholder="Email">
                     </div>
 
-                    <label><b>Gender</b></label>
+                    <div class="form-group">
+                        <input type="gender" id="gender" class="form-control" formControlName="gender" placeholder="gender">
+                    </div>
+                    <!-- <label><b>Gender</b></label>
                     <select name="gender" required="required">
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
                         <option value="Other">Other</option>
-                    </select>
-
-                    <br>
-                    <br>
+                    </select> -->
                     <button type="submit" class="btn btn-submit btn-block">Submit</button>
                     <br>
                     <br>
