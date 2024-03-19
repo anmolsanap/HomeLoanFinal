@@ -17,6 +17,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { EmiCalculatorComponent } from './template/emi-calculator/emi-calculator.component';
 import { RegisterCustomerComponent } from './includes/register-customer/register-customer.component';
+import { Router } from '@angular/router';
 
 @NgModule({
   declarations: [

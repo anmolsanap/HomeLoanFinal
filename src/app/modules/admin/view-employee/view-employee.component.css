@@ -1,0 +1,73 @@
+
+body {
+   
+    background-image: url('/assets/images/605746.jpg'); 
+    /* Replace 'your-background-image.jpg' with your actual image file */
+    background-size: cover;
+    height: 90vh;
+    /* background-position: center; */
+}
+ .container {
+    max-width: 960px;
+    margin: 50px auto;
+    padding: 20px;
+    /* background-color: #fff; White background */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    /* Shadow effect  */
+    background-color: rgba(255, 255, 255, 0.8);
+     /* White background with some opacity  */
+   
+} 
+
+h3 {
+    text-align: center;
+    /* color: #007bff; Bootstrap's primary color */
+    color: rgb(2, 2, 8);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd; /* Light gray border */
+}
+
+th {
+    /* background-color: #007bff; Bootstrap's primary color */
+    background-color: #0a509b;
+    color: #fff; /* White text color */
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light gray background for even rows */
+}
+
+tr:hover {
+    background-color: #e2e2e2; /* Darker gray background on hover */
+}
+
+.btn {
+    background-color: #dc3545; /* Bootstrap's danger color */
+    color: #fff; /* White text color */
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+.btn:disabled {
+    background-color: #6c757d; /* Bootstrap's secondary color for disabled state */
+    cursor: not-allowed;
+}

@@ -1,3 +1,5 @@
+<body>
+<div class="container">
 <h1 class="text-center mb-5">
     <i class="fa fa-th-list" aria-hidden="true"></i>Employee Data
 </h1>
@@ -12,11 +14,12 @@
             <th scope="col">Employee Designation</th>
             <th scope="col">Employee UserName</th>
             <th scope="col">Employee Password</th>
+            <th scope="col">Action</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let e of employee">
-            <th scope="row">{{e.employeeId}}</th>
+            <td scope="row">{{e.employeeId}}</td>
             <td>{{e.employeeName}}</td>
             <td>{{e.address}}</td>
             <td>{{e.employeeEmail}}</td>
@@ -24,6 +27,12 @@
             <td>{{e.employeeDesignation}}</td>
             <td>{{e.userName}}</td>
             <td>{{e.passWord}}</td>
+            <td>
+                <button class="btn btn-primary" (click)="onupdate(e)"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                <button class="btn btn-primary" (click)=" onDelete(e.employeeId)"><i class="fa fa-trash" aria-hidden="true"></i></button>
+            </td>
         </tr>
     </tbody>
 </table>
+</div>
+</body>

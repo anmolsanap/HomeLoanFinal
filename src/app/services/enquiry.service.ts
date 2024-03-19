@@ -10,6 +10,7 @@ import { Employee } from '../model/employee';
 })
 export class EnquiryService {
 
+
   constructor(private http : HttpClient) { }
 
   saveEnquiry(enquiry : UserEnquiry){
@@ -24,10 +25,21 @@ export class EnquiryService {
   }
   insertAllEmployee(emp:Employee)
   {
-    return this.http.post("http://desktop-ogji1pf:9092/employee",emp);
+    return this.http.post("http://laptop-enldsp8a:9092/employee",emp);
   }
   getEmployeeData()
   {
-    return this.http.get("http://desktop-ogji1pf:9092/getemployee");
+    return this.http.get("http://laptop-enldsp8a:9092/getemployee");
   }
+  deleteemployee(employeeId:number)
+  {
+  return this.http.delete("http://laptop-enldsp8a:9092/deleteEmployee/"+employeeId);
+  }
+   
+  updateemployee(employee:Employee)
+  {
+    return this.http.put("http://laptop-enldsp8a:9092/update/"+ employee.employeeId,employee);
+  }
+
+
 }

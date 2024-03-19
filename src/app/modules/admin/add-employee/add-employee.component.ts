@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { EnquiryService } from '../../../services/enquiry.service';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
+import { Employee } from '../../../model/employee';
 
 @Component({
   selector: 'app-add-employee',
@@ -8,8 +10,9 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrl: './add-employee.component.css'
 })
 export class AddEmployeeComponent implements OnInit{
+  flag: boolean;
 
-constructor(private service:EnquiryService,private fb:FormBuilder){ }
+constructor(private service:EnquiryService,private fb:FormBuilder,private activeRoute:ActivatedRoute){ }
 
 employeeForm:FormGroup;
   ngOnInit(): void {
@@ -24,6 +27,7 @@ employeeForm:FormGroup;
         passWord:[]
       }
     )
+   
   }
 
   onSub()
@@ -33,3 +37,5 @@ employeeForm:FormGroup;
   }
 
 }
+
+
