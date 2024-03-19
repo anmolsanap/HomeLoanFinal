@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './template/dashboard/dashboard.component';
 import { AboutUsComponent } from './template/about-us/about-us.component';
-import { HeaderComponent } from './template/header/header.component';
 import { LocationComponent } from './template/location/location.component';
 import { EnquiryComponent } from './includes/enquiry/enquiry.component';
 import { LoginComponent } from './includes/login/login.component';

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { UserEnquiry } from '../model/user-enquiry';
+import { Customer } from '../model/customer';
 
 
 
@@ -21,4 +22,5 @@ export class EnquiryService {
   updateCibilScore(cibil:UserEnquiry) {
     return this.http.put("http://laptop-enldsp8a:9000/updateCibil/" +cibil.userEnquiryId,cibil);
   }
+ 
 }

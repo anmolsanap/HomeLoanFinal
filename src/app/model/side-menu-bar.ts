@@ -9,9 +9,12 @@ export class SideMenuBar {
             ],
 
             relation_executive:[
+                     {label : 'Customer Registration', link : 'customer-registration'},
                     {label : 'Feedback', link : 'feedback'},
                     {label : 'View Loan Applications', link : 'view-loan-applications'},
                     {label : 'View Enquiry', link : 'view-enquiry'},
+                    
+                    
                   
                     
             ]

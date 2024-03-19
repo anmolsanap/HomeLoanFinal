@@ -4,15 +4,14 @@ import { LoanSanction } from "./loan-sanction";
 
 export class Customer {
 
-      id;
-      customerName;
-      address;
-      mobileNo
-      email;
-      userName;
-      password;
-     bank : Bank
+    customerId:number;
+    customerName:string;
+    address:string;
+      mobileNo:number;
+      email:string;
+      username:string;
+      password:string;
+     bank : Bank;
      document : CustomerDocuments;
-    loanSanction : LoanSanction;
 
 }

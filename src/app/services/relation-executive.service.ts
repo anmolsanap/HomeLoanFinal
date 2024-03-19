@@ -9,12 +9,11 @@ export class RelationExecutiveService {
 
   constructor(private http : HttpClient) { }
 
-
-    saveAllEnquiryDetail(customer : Customer){
-      return this.http.post("http://localhost:3000/re/", customer);
-  }
-
   getAllCustomerDetail(){
-    return this.http.get("http://localhost:3000/re");
+    return this.http.get("http://laptop-oku7dfk5:9092/getCustomerDetails");
+  }
+  saveCustomerData(formData:FormData)
+  {
+    return this.http.post('http://laptop-oku7dfk5:9092/saveCustomerDetails',formData);
   }
 }
