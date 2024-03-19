@@ -1,1 +1,33 @@
-<p>add-employee works!</p>
+<form [formGroup]="employeeForm" (ngSubmit)="onSub()">
+    <div>
+        <div>
+            <h3>Add Employees</h3>
+        </div>
+        <div>
+            <div>
+                <input type="text" formControlName="employeeName" placeholder="Enter Employee Name">
+            </div>
+            <div>
+                <input type="text" formControlName="address" placeholder="Enter Employee Address">
+            </div>
+            <div>
+                <input type="email" formControlName="employeeEmail" placeholder="Enter Employee Email">
+            </div>
+            <div>
+                <input type="number" formControlName="employeeMobileNo" placeholder="Enter Employee Mobile">
+            </div>
+            <div>
+                <input type="text" formControlName="employeeDesignation" placeholder="Enter Employee Designation">
+            </div>
+            <div>
+                <input type="text" formControlName="userName" placeholder="Enter Employee Username">
+            </div>
+            <div>
+                <input type="text" formControlName="passWord" placeholder="Enter Employee Password">
+            </div>
+        </div>
+        <div>
+            <button class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+</form>

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { UserEnquiry } from '../model/user-enquiry';
+import { Employee } from '../model/employee';
 
 
 
@@ -16,9 +17,17 @@ export class EnquiryService {
   }
 
   getAllEnquiry(Observer){
-    return this.http.get("http://laptop-enldsp8a:9000/getuserenquiry");
+    return this.http.get("http://desktop-ogji1pf:9000/getuserenquiry");
   }
   updateCibilScore(cibil:UserEnquiry) {
     return this.http.put("http://laptop-enldsp8a:9000/updateCibil/" +cibil.userEnquiryId,cibil);
+  }
+  insertAllEmployee(emp:Employee)
+  {
+    return this.http.post("http://desktop-ogji1pf:9092/employee",emp);
+  }
+  getEmployeeData()
+  {
+    return this.http.get("http://desktop-ogji1pf:9092/getemployee");
   }
 }

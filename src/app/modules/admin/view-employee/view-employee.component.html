@@ -1,1 +1,29 @@
-<p>view-employee works!</p>
+<h1 class="text-center mb-5">
+    <i class="fa fa-th-list" aria-hidden="true"></i>Employee Data
+</h1>
+<table class="table table-hover text-center">
+    <thead>
+        <tr>
+            <th scope="col">Employee Id</th>
+            <th scope="col">Employee Name</th>
+            <th scope="col">Employee Address</th>
+            <th scope="col">Employee Email</th>
+            <th scope="col">Employee MobileNo</th>
+            <th scope="col">Employee Designation</th>
+            <th scope="col">Employee UserName</th>
+            <th scope="col">Employee Password</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let e of employee">
+            <th scope="row">{{e.employeeId}}</th>
+            <td>{{e.employeeName}}</td>
+            <td>{{e.address}}</td>
+            <td>{{e.employeeEmail}}</td>
+            <td>{{e.employeeMobileNo}}</td>
+            <td>{{e.employeeDesignation}}</td>
+            <td>{{e.userName}}</td>
+            <td>{{e.passWord}}</td>
+        </tr>
+    </tbody>
+</table>
