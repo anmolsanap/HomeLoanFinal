@@ -13,6 +13,8 @@ export class SideMenuBar {
                     {label : 'Feedback', link : 'feedback'},
                     {label : 'View Loan Applications', link : 'view-loan-applications'},
                     {label : 'View Enquiry', link : 'view-enquiry'},
+                    {label : 'Approved Enquiries', link : 'approve-enquiries'},
+                    {label : 'Reject Enquiries', link : 'reject-enquiries'},
                     
                     
                   

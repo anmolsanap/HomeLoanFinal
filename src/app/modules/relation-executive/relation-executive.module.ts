@@ -5,6 +5,8 @@ import { RelationExecutiveRoutingModule } from './relation-executive-routing.mod
 import { FeedbackComponent } from './feedback/feedback.component';
 import { ViewLoanComponent } from './view-loan/view-loan.component';
 import { ViewEnquiryComponent } from './view-enquiry/view-enquiry.component';
+import { ApprovedEnquiryComponent } from './approved-enquiry/approved-enquiry.component';
+import { RejectEnquiryComponent } from './reject-enquiry/reject-enquiry.component';
 
 
 @NgModule({
@@ -12,6 +14,9 @@ import { ViewEnquiryComponent } from './view-enquiry/view-enquiry.component';
     FeedbackComponent,
     ViewLoanComponent,
     ViewEnquiryComponent,
+    ApprovedEnquiryComponent,
+    RejectEnquiryComponent,
+  
    
   ],
   imports: [

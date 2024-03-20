@@ -1,0 +1,17 @@
+
+.card{
+    margin: 80px 40px 20px 10px ; 
+    width: 280px;
+    height: 150px;
+    background-image: url("/assets/images/BgCm.jpg");
+}
+.card-title{
+
+    text-align: center;
+
+}
+.card-text{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: x-large;
+} 

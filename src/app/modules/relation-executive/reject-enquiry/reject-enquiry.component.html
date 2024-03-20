@@ -1,0 +1,43 @@
+<body>
+    <div class="container">
+    <h3>Reject Enquiry Users</h3>
+    <table>
+    <thead >
+        <tr>
+            <th>Customer Id</th>
+            <th>Customer Name</th>
+            <th>Address</th>
+            <th>Email</th>
+            <th>Pan Card No</th>
+            <th>Mobile No</th>
+            <th>Gender</th>
+            <th>Cibil Score</th>
+            <th>Cibil Status</th>
+        </tr>
+    </thead>
+    <tbody class="text-center">
+        <tr *ngFor="let enquiry of rejectuser">
+            <td>{{enquiry.userEnquiryId}}</td>
+            <td>{{enquiry.enquiryName}}</td>
+            <td>{{enquiry.address}}</td>
+            <td>{{enquiry.email}}</td>
+            <td>{{enquiry.panCard | uppercase}}</td>
+            <td>{{enquiry.mobileNo}}</td>
+            <td>{{enquiry.gender}}</td>
+            
+           
+                
+                <td>{{enquiry.cibil.cibilScore}}</td>
+                <td>{{enquiry.cibil.cibilStatus}}</td>
+            
+              
+            
+            
+            </tr>
+    
+    </tbody>
+</table>
+</div>
+</body>
+
+
