@@ -1,10 +1,10 @@
 export class CustomerDocuments {
 
      documentId : number
-     adharCard : number[];
-     panCard : number[];
-     bankPassbook : number[];
-     incomeCertificate : number[];
-     customerPhoto : number[];
+     adharCard : any[];
+     panCard : any[];
+     bankPassbook : any[];
+     incomeCertificate : any[];
+     customerPhoto : any[];
 
 }

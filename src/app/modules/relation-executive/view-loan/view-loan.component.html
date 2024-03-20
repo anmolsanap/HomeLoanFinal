@@ -15,27 +15,26 @@
                 <th>User Name</th>
                 <th>Password</th>
                 <th>Account No</th>
-                <th>Bank Name</th>
                 <th>IFSC Code</th>
                 <th>Bank Address</th>
-                <th>Photo</th>
+                <th>Customer Photo</th>
                 <th>Adhar Card</th>
                 <th>Pan Card</th>
                 <th>Income Certificate</th>
+                <th>Bank Passbook</th>
                 <th>Action</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let customer of customerList">
-                <td>{{customer.id}}</td>
+                <td>{{customer.customerId}}</td>
                 <td>{{customer.customerName}}</td>
                 <td>{{customer.address}}</td>
                 <td>{{customer.email}}</td>
                 <td>{{customer.mobileNo}}</td>
-                <td>{{customer.userName}}</td>
+                <td>{{customer.username}}</td>
                 <td>{{customer.password}}</td>
                 <td>{{customer.bank.accountNo}}</td>
-                <td>{{customer.bank.bankName}}</td>
                 <td>{{customer.bank.bankIFSC | uppercase}}</td>
                 <td>{{customer.bank.branchAddress}}</td>
                 <td><img [src]="'customerList:image/jpeg;base64,' +customer.document.customerPhoto" height="70px" width="70px"></td>

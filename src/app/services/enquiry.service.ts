@@ -5,6 +5,7 @@ import { Employee } from '../model/employee';
 
 
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -23,6 +24,7 @@ export class EnquiryService {
   updateCibilScore(cibil:UserEnquiry) {
     return this.http.put("http://laptop-enldsp8a:9000/updateCibil/" +cibil.userEnquiryId,cibil);
   }
+
   insertAllEmployee(emp:Employee)
   {
     return this.http.post("http://laptop-enldsp8a:9092/employee",emp);
@@ -40,6 +42,4 @@ export class EnquiryService {
   {
     return this.http.put("http://laptop-enldsp8a:9092/update/"+ employee.employeeId,employee);
   }
-
-
 }
