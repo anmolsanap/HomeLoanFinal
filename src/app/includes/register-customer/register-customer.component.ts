@@ -101,6 +101,7 @@ export class RegisterCustomerComponent implements OnInit {
       const file = event.target.files[0];
       const reader = new FileReader();
       reader.onload = () => {
+        
         this.registerCustomer.get('document.customerPhoto').setValue(reader.result);
         this.imgSrc1 = reader.result as string; // Display the image preview
       };
