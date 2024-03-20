@@ -18,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { EmiCalculatorComponent } from './template/emi-calculator/emi-calculator.component';
 import { RegisterCustomerComponent } from './includes/register-customer/register-customer.component';
 import { Router } from '@angular/router';
+import { FooterComponent } from './template/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { Router } from '@angular/router';
     SideMenuComponent,
     ContactUsComponent,
     EmiCalculatorComponent,
-    RegisterCustomerComponent
+    RegisterCustomerComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

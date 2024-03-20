@@ -19,7 +19,7 @@ export class EnquiryService {
   }
 
   getAllEnquiry(Observer){
-    return this.http.get("http://desktop-ogji1pf:9000/getuserenquiry");
+    return this.http.get("http://laptop-enldsp8a:9000/getuserenquiry");
   }
   updateCibilScore(cibil:UserEnquiry) {
     return this.http.put("http://laptop-enldsp8a:9000/updateCibil/" +cibil.userEnquiryId,cibil);
