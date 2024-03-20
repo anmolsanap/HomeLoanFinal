@@ -84,9 +84,9 @@ export class LoginComponent implements OnInit{
           this.router.navigateByUrl('user-dashboard/relation_executive')
             }
             else if(un === 'oe' && ps === 'oe@123'){
-              alert("RE Logged in")
-              sessionStorage.setItem("userType", "operation_executive");
-              this.router.navigateByUrl('user-dashboard/operation_executive')
+              alert("Oe Logged in")
+              sessionStorage.setItem("userType", "operation-executive");
+              this.router.navigateByUrl('user-dashboard/operation-executive')
           }
           else if(un === 'ah' && ps === 'ah@123'){
             alert("RE Logged in")

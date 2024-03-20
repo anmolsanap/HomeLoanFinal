@@ -26,7 +26,7 @@ const routes: Routes = [
     {path : 'relation_executive', loadChildren:()=>import('./modules/relation-executive/relation-executive.module')
                                 .then(module=>module.RelationExecutiveModule)},
     {path : 'credit-manager', loadChildren:()=> import('./modules/credit-manager/credit-manager.module').then(module=>module.CreditManagerModule)},
-    {path : 'credit-manager', loadChildren:()=> import('./modules/credit-manager/credit-manager.module').then(module=>module.CreditManagerModule)},
+    {path : 'operation-executive', loadChildren:()=> import('./modules/operation-executive/operation-executive.module').then(module=>module.OperationExecutiveModule)}
   
   ]}
 ];

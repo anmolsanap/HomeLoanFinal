@@ -1,21 +1,16 @@
-/* th{
-    text-align: center;
-}
-td{
-    text-align: center;
-} */
+
 body {
    
     background-image: url('/assets/images/605746.jpg'); 
 
     background-size: cover;
     height: 90vh;
+    width: 100%;
 
 }
 .container {
-
     margin: 50px auto;
-    padding: 20px; 
+    padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
     background-color: rgba(255, 255, 255, 0.8);
@@ -34,7 +29,7 @@ table {
 }
 
 th, td {
-    padding: 8px;
+  
     text-align: left;
     border-bottom: 1px solid #ddd; 
 }
@@ -45,5 +40,5 @@ th {
     color: #fff; 
 }
 tr:hover {
-    background-color: #e2e2e2; /* Darker gray background on hover */
+    background-color: #e2e2e2; 
 }

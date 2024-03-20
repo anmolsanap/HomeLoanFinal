@@ -18,8 +18,8 @@ export class ViewLoanComponent implements OnInit{
   
 
   ngOnInit(): void {
-      this.enquiryService.getAllCustomerDetail().subscribe((customer : Customer[])=>{
-        this.customerList = customer;
+      this.enquiryService.getAllCustomerDetail().subscribe((data : Customer[])=>{
+        this.customerList = data;
       })
   }
   

@@ -1,5 +1,6 @@
+<div style="background-image: url('/assets/images/enqu.jpg'); background-repeat:no-repeat ; background-size: cover; height: 90vh;">
 <form [formGroup]="registerCustomer" (ngSubmit)="onsubmit()">
-  <div id="msform">
+  <div id="msform" class="pt-5">
     <fieldset *ngIf="step == 1">
       <h2 class="fs-title">Applicant Details</h2>
       <div class="row">
@@ -21,6 +22,7 @@
         <div class="col">
           <input type="text" formControlName="password" placeholder="Password" />
         </div>
+        
       </div>
       <input (click)="next()" type="button" name="next" class="next action-button" value="Next" />
     </fieldset>
@@ -52,26 +54,31 @@
           <label>Upload Customer Photo:</label>
          
           <input type="file" formControlName="customerPhoto" (change)="onSelectCustPhoto($event)">
+          <img [src]="imgSrc1" height="50px">
         </div>
         <div class="col">
           <label>Upload Aadharcard:</label>
         
           <input type="file" formControlName="adharCard" (change)="onSelectAdhar($event)">
+          <img [src]="imgSrc2" height="50px">
         </div>
         <div class="col">
           <label>Upload Pancard:</label>
      
           <input type="file" formControlName="panCard" (change)="onSelectPan($event)">
+          <img [src]="imgSrc3" height="50px">
         </div>
         <div class="col">
           <label>Upload Bank PassBook:</label>
       
           <input type="file" formControlName="bankPassbook" (change)="onSelectPassbook($event)">
+          <img [src]="imgSrc4" height="50px">
         </div>
         <div class="col">
           <label>Upload Income Certificate:</label>
         
           <input type="file" formControlName="incomeCertificate" (change)="onSelectIncome($event)">
+          <img [src]="imgSrc5" height="50px">
         </div>
         <!-- Add similar blocks for other document uploads -->
       </div>
@@ -81,3 +88,4 @@
     </div>
   </div>
 </form>
+</div>

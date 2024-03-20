@@ -10,7 +10,7 @@ export class RelationExecutiveService {
   constructor(private http : HttpClient) { }
 
   getAllCustomerDetail(){
-    return this.http.get("http://laptop-oku7dfk5:9092/getCustomerDetails");
+    return this.http.get("http://laptop-oku7dfk5:9000/getuserenquiry");
   }
   saveCustomerData(formData:FormData)
   {
