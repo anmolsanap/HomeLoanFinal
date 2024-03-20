@@ -85,8 +85,8 @@ export class LoginComponent implements OnInit{
             }
             else if(un === 'oe' && ps === 'oe@123'){
               alert("RE Logged in")
-              sessionStorage.setItem("userType", "relation_executive");
-              this.router.navigateByUrl('user-dashboard/relation_executive')
+              sessionStorage.setItem("userType", "operation_executive");
+              this.router.navigateByUrl('user-dashboard/operation_executive')
           }
           else if(un === 'ah' && ps === 'ah@123'){
             alert("RE Logged in")
@@ -94,9 +94,9 @@ export class LoginComponent implements OnInit{
             this.router.navigateByUrl('user-dashboard/relation_executive')
         }
         else if(un === 'cm' && ps === 'cm@123'){
-          alert("RE Logged in")
-          sessionStorage.setItem("userType", "relation_executive");
-          this.router.navigateByUrl('user-dashboard/relation_executive')
+          alert("CM Logged in")
+          sessionStorage.setItem("userType", "credit-manager");
+          this.router.navigateByUrl('user-dashboard/credit-manager')
         }
     else
     {

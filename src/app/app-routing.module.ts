@@ -24,7 +24,10 @@ const routes: Routes = [
   {path : 'user-dashboard', component : UserDashboardComponent, children:[
     {path : 'admin', loadChildren:()=> import('./modules/admin/admin.module').then(module=>module.AdminModule)},
     {path : 'relation_executive', loadChildren:()=>import('./modules/relation-executive/relation-executive.module')
-                                .then(module=>module.RelationExecutiveModule)}
+                                .then(module=>module.RelationExecutiveModule)},
+    {path : 'credit-manager', loadChildren:()=> import('./modules/credit-manager/credit-manager.module').then(module=>module.CreditManagerModule)},
+    {path : 'credit-manager', loadChildren:()=> import('./modules/credit-manager/credit-manager.module').then(module=>module.CreditManagerModule)},
+  
   ]}
 ];
 

@@ -42,12 +42,7 @@ export class RegisterCustomerComponent implements OnInit {
         branchAddress: ['', Validators.required]
       }),
       document: this.formBuilder.group({
-        documentId: [''],
-        adharCard: [''],
-        panCard: [''],
-        bankPassbook: [''],
-        incomeCertificate: [''],
-        customerPhoto: ['']
+        documentId: ['']
       })
     });
   }
@@ -87,26 +82,26 @@ export class RegisterCustomerComponent implements OnInit {
       }
     }
   }
-  // onSelectCustPhoto(event:any)
-  // {
-  //   console.log(event);
-  //   this.photo=event.target.files[0];
-  //   this.reader.onload=e=>
-  //   this.imgSrc1=this.reader.result;
-  //   this.reader.readAsDataURL(this.photo)
-  // }
-
-  onSelectCustPhoto(event: any) {
-    if (event.target.files && event.target.files[0]) {
-      const file = event.target.files[0];
-      const reader = new FileReader();
-      reader.onload = () => {
-        this.registerCustomer.get('document.customerPhoto').setValue(reader.result);
-        this.imgSrc1 = reader.result as string; // Display the image preview
-      };
-      reader.readAsDataURL(file);
-    }
+  onSelectCustPhoto(event:any)
+  {
+    console.log(event);
+    this.photo=event.target.files[0];
+    this.reader.onload=e=>
+    this.imgSrc1=this.reader.result;
+    this.reader.readAsDataURL(this.photo)
   }
+
+  // onSelectCustPhoto(event: any) {
+  //   if (event.target.files && event.target.files[0]) {
+  //     const file = event.target.files[0];
+  //     const reader = new FileReader();
+  //     reader.onload = () => {
+  //       this.registerCustomer.get('document.customerPhoto').setValue(reader.result);
+  //       this.imgSrc1 = reader.result as string; // Display the image preview
+  //     };
+  //     reader.readAsDataURL(file);
+  //   }
+  // }
   onSelectAdhar(event:any)
   {
     this.adhar=event.target.files[0];
